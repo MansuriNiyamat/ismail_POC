@@ -1,0 +1,32 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+
+     
+          <span>POC App</span>
+          <span class="example-spacer"></span>
+         
+         
+            <mat-nav-list>
+
+               <button mat-raised-button color="accent" (click)="jobs()">
+                Jobs
+               </button> 
+               <button mat-raised-button color="accent" (click)="users()">
+                  Users 
+
+               </button>
+              
+          
+              </mat-nav-list>
+            <span class="example-spacer"></span>
+     
+    
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
